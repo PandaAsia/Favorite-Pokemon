@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ************************ Custom Properties *********************** */
+:root {
+  --firts-Color: #d30a40;
+  --secont-color: #900429;
+}
+
+main,
+.List-Poke-circle {
+  background-color: var(--firts-Color);
+}
+
+.luces-contenier {
+  background-color: var(--firts-Color);
+  border-bottom: solid 2rem var(--secont-color);
+}
+
+.List-Poke-container {
+  /* clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 87%, 0 0); */
+}
+
+.panel-menu {
+  transition: transform 0.3s ease-in;
+  transform: translate(-100%, 0);
+}
+
+.panel-menu.is-active {
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-in;
+}
+
+.panel-menu-bgroung {
+  clip-path: polygon(60% 12%, 78% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+}
+
+@media (min-width: 768px) {
+  .List-Poke-container {
+    clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 90%, 0 0);
+  }
+
+  .panel-menu-bgroung {
+    clip-path: polygon(40% 8%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .List-Poke-container {
+    clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 80%, 0 0);
+  }
+  .panel-menu-bgroung {
+    clip-path: polygon(20% 10%, 30% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  }
+}
+
+.crus {
+  clip-path: polygon(
+    0% 40%,
+    40% 40%,
+    40% 0%,
+    60% 0%,
+    60% 40%,
+    100% 40%,
+    100% 60%,
+    60% 60%,
+    60% 100%,
+    40% 100%,
+    40% 60%,
+    0% 60%
+  );
+}

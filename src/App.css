@@ -1,0 +1,394 @@
+/* ************************ Custom Properties *********************** */
+
+:root {
+  --first-color: #e9b824;
+  --seconts-color: #d83f31;
+  --thirt-color: #ffd95a;
+  --fourt-color: #c07f00;
+  --color-white: #fff;
+  --gey-color: #d4d4d4;
+}
+
+/* ************************ Reser *********************** */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.none {
+  display: none;
+}
+
+/* ************************ Fondo animado *********************** */
+
+.context {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
+
+.area {
+  background: #e9b824;
+  background: -webkit-linear-gradient(to left, #d83f31, #e9b824);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.circles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/*---------------- My-style --------------------*/
+
+.logo {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 70%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-gene {
+  padding: 0.5rem;
+}
+
+.size-container-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--thirt-color);
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  font-weight: bold;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.type-pokemons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0.5rem 0;
+}
+
+.size-button {
+  width: 90px;
+  height: 90px;
+  background-color: var(--fourt-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0.5rem 0;
+  transition: all 0.3s ease-in;
+}
+
+.size-button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.size-button p {
+  margin: 0;
+}
+
+.size-button img {
+  width: 80%;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.panel-button-pokemons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.select-pokemon {
+  font-size: 3rem;
+}
+
+/*error*/
+.container-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title-error {
+  background-color: red;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.container-footer {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .logo img {
+    width: 50%;
+  }
+  .main-container {
+    padding: 0 1rem;
+  }
+
+  .type-pokemons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .panel-button-pokemons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .logo img {
+    width: 30%;
+  }
+  .main-container {
+    padding: 0 3rem;
+  }
+
+  .type-pokemons {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .panel-button-pokemons {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .logo img {
+    width: 20%;
+  }
+
+  .container-gene {
+    display: flex;
+    border: 0.4rem white solid;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+  }
+
+  .type-pokemons {
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+  }
+
+  .size-container-title {
+    width: 130px;
+    height: 130px;
+    margin-right: 1rem;
+  }
+
+  .panel-button-pokemons {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .size-container-title {
+    width: 120px;
+    height: 120px;
+    margin-right: 0.5rem;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .logo img {
+    width: 15%;
+  }
+
+  .type-pokemons {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .main-container {
+    padding: 0 7rem;
+  }
+  .panel-button-pokemons {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+/* 
+// XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
